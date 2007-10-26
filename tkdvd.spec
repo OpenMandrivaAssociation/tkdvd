@@ -1,5 +1,5 @@
 %define name	tkdvd
-%define version 4.0.6
+%define version 4.0.7
 %define release %mkrel 1
 
 Name: 	 	%{name}
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %update_menus
-		
+
 %postun
 %clean_menus
 
