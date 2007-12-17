@@ -11,7 +11,6 @@ Source:		http://regis.damongeot.free.fr/tkdvd/dl/%{name}-%{version}.tar.bz2
 URL:		http://regis.damongeot.free.fr/tkdvd/
 License:	GPL
 Group:		Archiving/Cd burning
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ImageMagick
 Requires:	dvd+rw-tools tk tcl
 BuildArch:	noarch
