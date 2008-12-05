@@ -7,6 +7,8 @@ Group:		Archiving/Cd burning
 URL:		http://regis.damongeot.free.fr/tkdvd/
 Source0:	http://regis.damongeot.free.fr/tkdvd/dl/%{name}-%{version}.tar.gz
 BuildRequires:	imagemagick
+# For macros
+BuildRequires:	tcl-devel
 Requires:	dvd+rw-tools tk tcl
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
