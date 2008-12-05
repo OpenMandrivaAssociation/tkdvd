@@ -1,11 +1,11 @@
 Summary:	Simple DVD mastering GUI
 Name:		tkdvd
-Version:	4.0.8
-Release:	%mkrel 2
+Version:	4.0.9
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://regis.damongeot.free.fr/tkdvd/
-Source0:	http://regis.damongeot.free.fr/tkdvd/dl/%{name}-%{version}.tar.bz2
+Source0:	http://regis.damongeot.free.fr/tkdvd/dl/%{name}-%{version}.tar.gz
 BuildRequires:	imagemagick
 Requires:	dvd+rw-tools tk tcl
 BuildArch:	noarch
@@ -35,15 +35,15 @@ Features:
 chmod 755 TkDVD.sh
 chmod 644 icons/*.*
 chmod 644 src/*.tcl
-perl -p -i -e 's|\$\{source_directory\}|%{_datadir}/%{name}||g' TkDVD.sh src/*
+perl -p -i -e 's|\$\{source_directory\}|%{tcl_sitelib}/%{name}||g' TkDVD.sh src/*
 
 %install
 rm -fr %{buildroot}
-mkdir -p %{buildroot}/%{_datadir}/%{name}
-cp TkDVD.sh %{buildroot}/%{_datadir}/%{name}
-cp -r src %{buildroot}/%{_datadir}/%{name}
-mkdir -p %{buildroot}/%{_bindir}
-ln -sf %{_datadir}/%{name}/TkDVD.sh %{buildroot}/%{_bindir}/%{name}
+mkdir -p %{buildroot}%{tcl_sitelib}/%{name}
+cp TkDVD.sh %{buildroot}%{tcl_sitelib}/%{name}
+cp -r src %{buildroot}%{tcl_sitelib}/%{name}
+mkdir -p %{buildroot}%{_bindir}
+ln -sf %{tcl_sitelib}/%{name}/TkDVD.sh %{buildroot}%{_bindir}/%{name}
 
 #menu
 
@@ -84,6 +84,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc ChangeLog FAQ README TODO
 %{_bindir}/%{name}
-%{_datadir}/%{name}
+%{tcl_sitelib}/%{name}
 %{_datadir}/applications/*
 %{_iconsdir}/hicolor/*/apps/%{name}.png
