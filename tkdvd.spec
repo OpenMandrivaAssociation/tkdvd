@@ -1,7 +1,7 @@
 Summary:	Simple DVD mastering GUI
 Name:		tkdvd
 Version:	4.0.9
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://regis.damongeot.free.fr/tkdvd/
