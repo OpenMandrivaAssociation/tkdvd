@@ -4,7 +4,7 @@ Version:	4.0.9
 Release:	3
 License:	GPLv2+
 Group:		Archiving/Cd burning
-URL:		http://regis.damongeot.free.fr/tkdvd/
+URL:		https://regis.damongeot.free.fr/tkdvd/
 Source0:	http://regis.damongeot.free.fr/tkdvd/dl/%{name}-%{version}.tar.gz
 BuildRequires:	imagemagick
 # For macros
